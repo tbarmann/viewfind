@@ -1,0 +1,24 @@
+<div class="form-group">
+    <label for="title" class="col-sm-2 control-label">Title</label>
+    <div class="col-sm-10">
+        <input type="text" ng-model="photo.title" class="form-control" id="title" placeholder="Photo Title Here"/>
+    </div>
+</div>
+<div class="form-group">
+    <label for="year" class="col-sm-2 control-label">Photo Url</label>
+    <div class="col-sm-10">
+        <input type="text" ng-model="photo.image" class="form-control" id="image" placeholder="Photo url"/>
+    </div>
+</div>
+<div class="form-group">
+    <label for="year" class="col-sm-2 control-label">Story ID</label>
+    <div class="col-sm-10">
+        <input type="text" ng-disabled="true" ng-model="photo.story_id" class="form-control" id="story_id" placeholder=""/>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+        <input type="submit" class="btn btn-primary" value="Save"/>
+    </div>
+</div>

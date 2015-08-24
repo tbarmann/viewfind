@@ -1,0 +1,32 @@
+<table class="table storytable">
+    <tr>
+        <td colspan="3"><h3>Details for {{story.title}}</h3></td>
+    </tr>
+    <tr>
+        <td>Story Title</td>
+         <td>{{story.title}}</td>
+        <td>
+            <a class="btn btn-primary" ui-sref="editStory({id:story.id})">Edit</a>
+            <a ui-sref="newPhoto({id:story.id})" class="btn-primary btn nodecoration">Add New Photo</a>
+
+        </td>
+    </tr>
+   <tr>
+        <td colspan="3"><h3>Photos</h3></td>
+    </tr>
+    <tr ng-repeat="photo in photos | orderBy:['id']">
+        <td class="image"><img ng-src="{{photo.image}}"/></td>
+        <td>{{photo.title}}</td>
+        <td>
+        <!--    <a class="btn btn-primary" ui-sref="viewPhoto({id:photo.id})">View</a> -->
+            <a class="btn btn-danger"  ng-click="deletePhoto(photo)">Delete</a>
+        </td>
+    </tr>
+</table>
+
+
+
+</table>
+<div>
+    
+</div>

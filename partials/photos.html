@@ -1,0 +1,16 @@
+<a ui-sref="newPhoto" class="btn-primary btn-lg nodecoration">Add Photo</a>
+<table class="table storytable">
+    <tr>
+        <td colspan="4"><h3>All Photos</h3></td>
+        <td></td>
+    </tr>
+    <tr ng-repeat="photo in photos  | orderBy:['story_id','id']">
+        <td><img class="thumb" ng-src="{{photo.image}}"/></td>
+        <td>Title: {{photo.title}}</td>
+        <td>Story id:{{photo.story_id}}</td>
+        <td>
+         <!--   <a class="btn btn-primary" ui-sref="viewPhoto({id:photo.id})">View</a> -->
+            <a class="btn btn-danger"  ng-click="deletePhoto(photo)">Delete</a>
+        </td>
+    </tr>
+</table>
